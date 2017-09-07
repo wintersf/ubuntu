@@ -6,7 +6,7 @@ ADD https://partner-images.canonical.com/core/trusty/current/ubuntu-trusty-core-
 RUN set -xe \
 	\
 # https://github.com/docker/docker/blob/9a9fc01af8fb5d98b8eec0740716226fadb3735c/contrib/mkimage/debootstrap#L40-L48
-	&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d \
+	&& echo '#!/bin/bash' > /usr/sbin/policy-rc.d \
 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d \
 	&& chmod +x /usr/sbin/policy-rc.d \
 	\
